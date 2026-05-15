@@ -1,0 +1,48 @@
+# Test FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+### Get Customers (Max page limit at 100)
+GET http://127.0.0.1:8000/customers?page=1&per_page=20
+Accept: application/json
+
+### Get Customer By ID
+GET http://127.0.0.1:8000/customers/1001
+Accept: application/json
+
+### Create Customer
+POST http://127.0.0.1:8000/customers
+Content-Type: application/json
+
+{
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "john.doe@test.com",
+  "gender": "Male",
+  "ip_address": "192.168.1.1",
+  "company": "Acme Ltd",
+  "city": "Auckland",
+  "title": "Software Engineer",
+  "website": "https://acme.com"
+}
+
+### Update Customer
+PUT http://127.0.0.1:8000/customers/1001
+Content-Type: application/json
+
+{
+  "first_name": "Johnny",
+  "last_name": "Doe",
+  "email": "johnny.doe@test.com",
+  "gender": "Male",
+  "ip_address": "10.0.0.1",
+  "company": "Updated Company",
+  "city": "Wellington",
+  "title": "Senior Developer",
+  "website": "https://updated-example.com"
+}
+
+### Delete Customer
+DELETE http://127.0.0.1:8000/customers/1001
+Accept: application/json
