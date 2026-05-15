@@ -11,6 +11,7 @@
 - PyCharm .http testing
 - Pagination
 - Full CRUD endpoints
+- Swagger doc on <localhost_URL>/docs
 
 ---
 
